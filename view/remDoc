@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+
+  <title>rem</title>
+  <style></style>
+  <style>
+    *{padding:0;margin:0;}
+    /*对于没有使用sass的工程:可以将html的font-size设置成100px，这样在写单位时，直接将数值除以100在加上rem的单位就可以了。*/
+    /*html{font-size:100px;}*/
+
+    /*@media (min-device-width : 375px) and (max-device-width : 667px) and (-webkit-min-device-pixel-ratio : 2){
+      html{font-size: 37.5px;}
+    }*/
+    .container{
+      width:2rem;
+      height:2rem;
+      /*width:px2rem(200px);*/
+      /*height:px2rem(200px);*/
+      background-color:#ddd;
+      border-bottom: 1px solid #000;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function(e) {
+      document.getElementsByTagName('html')[0].style.fontSize = window.innerWidth / 10 + 'px';
+    }, false);
+
+    // window.onload=function(){
+    //   document.getElementsByTagName('html')[0].style.fontSize = window.innerWidth / 10 + 'px';
+    // let dpr=window.devicePixelRatio;
+    // let meta=document.getElementsByTagName("meta")[0];
+    // meta.setAttribute('content', 'initial-scale=' + 1/dpr + ', maximum-scale=' + 1/dpr + ', minimum-scale=' + 1/dpr + ', user-scalable=no');
+    // }
+
+  </script>
+</body>
+</html>
