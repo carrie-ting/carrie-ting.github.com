@@ -1,0 +1,67 @@
+/*最初*/
+.clear{clear:both;line-height:0;}
+
+
+/*起源*/
+.clearfix:after { 
+    visibility: hidden; 
+    display: block; 
+    font-size: 0; 
+    content: " "; 
+    clear: both; 
+    height: 0; 
+} 
+/*Hides from IE-mac , */
+.clearfix { display: inline-table; } 
+/*height: 1% 用来触发 IE6 下的haslayout。*/
+* html .clearfix { height: 1%; }
+/*重新对 IE/Mac 外的IE应用 block 显示属性，End hide from IE-mac ,用于结束针对 IE/Mac 的hack。*/
+.clearfix { display: block; }
+
+
+/*发展*/
+/*后面两条用于触发IE6/7的haslayout，以清除浮动*/
+.clearfix:after { 
+    visibility: hidden; 
+    display: block; 
+    font-size: 0; 
+    content: " "; 
+    clear: both; 
+    height: 0; 
+} 
+* html .clearfix { zoom: 1; } /* IE6 */ 
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+
+/*终极版一：*/
+.clearfix:after { 
+	/*Unicode字符里有一个“零宽度空格”，即 U+200B，代替原来的“.”，可以缩减代码量。
+	而且不再使用visibility:hidden*/
+    content:"200B"; 
+    display:block; 
+    height:0; 
+    clear:both; 
+} 
+.clearfix {*zoom:1;}/*IE/7/6*/
+
+/*终极版二：*/
+.clearfix:before,.clearfix:after{ 
+    content:""; 
+    display:table; 
+} 
+.clearfix:after{clear:both;} 
+.clearfix{ 
+    *zoom:1;/*IE/7/6*/ 
+}
+
+/*重构clearfix浮动*/
+
+/*构成Block Formatting Context的方法有下面几种：
+
+  float的值不为none。
+
+  overflow的值不为visible。
+
+  display的值为table-cell, table-caption, inline-block中的任何一个。
+
+  position的值不为relative和static。*/
