@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>background-origin/linear-gradient</title>
+  <style>
+    *{margin:0;padding:0;}
+    ul li{list-style: none;}
+    /*方案一*/
+    /*.demo li{
+      border-bottom: 1px solid #ccc;
+      line-height: 40px;
+    }
+    .demo li{
+      margin-left:15px;
+    }
+    .demo li:last-child{
+      margin-left: 0;
+      padding-left:15px;
+    }
+    .demo li:hover{
+      background-color: #f3f3f3;
+    }*/
+    /*方案二*/
+   /* .demo li{
+      position:relative;
+      padding-left:15px;
+      line-height: 40px;
+    }
+    .demo li::after{
+      position:absolute;
+      right:0;
+      bottom:0;
+      left:0;
+      border-bottom: 1px solid #ccc;
+      content:"";
+    }
+    .demo li:not(:last-child)::after{
+      left:15px;
+    }
+    .demo li:hover{
+      background-color: #f3f3f3;
+    }*/
+    /*方案三*/
+    .demo li{
+      padding-left:15px;
+      line-height: 40px;
+      background: linear-gradient(transparent 39px,#ccc 39px,#ccc) no-repeat;
+    }
+    .demo li:not(:last-child){
+      /*background-position 的百分比值参照的是设置背景的区域减去背景图的尺寸。*/
+      background-position:15px;
+    }
+    .demo li:hover{
+      background-color:#f3f3f3;
+    }
+    /*方案四*/
+    /*.demo li{
+      padding-left:15px;
+      line-height: 40px;
+      background: linear-gradient(transparent 39px,#ccc 39px,#ccc) no-repeat;
+    }
+    .demo li:not(:last-child){
+      background-origin:content-box;
+    }
+    .demo li:hover{
+      background-color:#f3f3f3;
+    }*/
+  </style>
+</head>
+<body>
+  <ul class="demo">
+    <li>1233454654</li>
+    <li>1233454654</li>
+    <li>1233454654</li>
+    <li>1233454654</li>
+    <li>1233454654</li>
+    <li>1233454654</li>
+    <li>1233454654</li>
+    <li>1233454654</li>
+    <li>1233454654</li>
+    <li>1233454654</li>
+  </ul>
+
+
+</body>
+</html>
