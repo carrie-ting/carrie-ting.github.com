@@ -11,12 +11,49 @@
 	<meta name="format-detection" content="telephone=no"/>
 	<!-- 忽略Android平台中对邮箱的识别 -->
 	<meta name="format-detection" content="email=no"/>
+	<!-- 声明添加到主屏幕的Web App标题 -->
+	<meta name="apple-mobile-web-app-title" content="Web App名称" />
 	<!-- 当网站添加到主屏幕快速启动方式，可隐藏地址栏，仅针对ios的safari 
 	ios7.0版本以后，safari上已看不到效果-->
 	<meta name="apple-mobile-web-app-capable" content="yes"/>
 	<!-- 将网站添加到主屏幕快速启动方式，仅针对ios的safari顶端状态条的样式 -->
 	<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
 	<!-- 可选default、balck、black-translucent -->
+
+	<!-- 声明页面刷新或跳转，该声明用来指定页面自刷新或者跳转到其它页面，其中的时间单位是s。 -->
+	<meta http-equiv="refresh" content="10" />
+	<meta http-equiv="refresh" content="10; url=http://www.google.com" />
+	<!-- 声明页面过期时间,该声明用来指定页面的过期时间，一旦网页过期，从服务器上重新请求，其中时间必须使用GMT格式，或者直接是0（即不缓存） -->
+	<meta http-equiv="expires" content="0" />
+	<meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT" />
+	<!-- 声明页面是否缓存,下述语句都可以用来指定文档不被缓存。一些仍然在使用HTTP/1.0的可以使用第1条，第2条由HTTP/1.1提供，常用值还有：public, no-cache, no-store等 -->
+	<meta http-equiv="pragma" content="no-cache" />
+	<meta http-equiv="cache-control" content="no-cache" />
+	<!-- 声明作者信息 -->
+	<meta name="author" content="carrie, carrie.ting@gmail.com" />
+	<!-- 声明文档关键字 -->
+	<meta name="keywords" content="CSS3, HTML5, JavaScript, 前端" />
+	<!-- 声明文档描述 -->
+	<meta name="description" content="这是一份meta列表" />
+	<!-- 声明使用的浏览器及版本 -->
+	<meta http-equiv="x-ua-compatible" content="IE=7" />
+	<meta http-equiv="x-ua-compatible" content="IE=EmulateIE7" />
+	<meta http-equiv="x-ua-compatible" content="IE=Edge" />
+	<meta http-equiv="x-ua-compatible" content="IE=7, 10, 11" />
+	<meta http-equiv="x-ua-compatible" content="IE=Edge, chrome=1" />
+	<!-- 声明搜索引擎抓取方式 
+	all（默认值，索引当前页并跟踪链接，相当于：index, follow）
+	none（忽略当前页，相当于：noindex, nofollow）
+	index（索引当前页）
+	noindex（不索引当前页）
+	follow（跟踪当前页链接，不论当前页是否被索引）
+	nofollow（不跟踪当前页链接，不论当前页是否被索引）-->
+	<meta name="robots" content="index" />
+	<!-- 如果声明冲突，某些引擎(chrome)可能会做严格处理： -->
+	<meta name="robots" content="noindex" />
+	<meta name="robots" content="index" />
+	<!-- 声明搜索引擎抓取间隔 -->
+	<meta name="revisit-after" content="10 days" />
 
 	<!-- 去掉winphone系统a、input标签被点击时产生的半透明灰色背景 -->
 	<meta name="msapplication-tap-highlight" content="no">
