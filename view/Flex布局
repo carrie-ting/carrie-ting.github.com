@@ -9,7 +9,7 @@
 			/*Flex container attribute*/
 			display:flex;
 			/*display:inline-flex;*/
-			display:-webkit-flex;
+			display:-webkit-flex;/*兼容safiri*/
 
 			flex-direction:row;/*row|row-reverse|column|column-reverse*/
 			flex-wrap: nowrap;/*nowrap|wrap|wrap-reverse*/
